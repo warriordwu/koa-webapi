@@ -55,3 +55,24 @@ app.use(usersRouter.allowedMethods()) // 可以使用options来请求
 跨平台设置环境变量
 `cross-env`
 `koa-parameter` 校验参数
+
++ nosql
++ 不是=同于传统关系型数据库的统称
++ HBase 列存储
++ MongoDB 文档存储
++ Redis key-value存储
++ FlockDB 图存储
++ db4o 对象存储
++ BaseX XML存储
+
+没有原子性,一致性,隔离性等复杂规范
+便于横向拓展
+
+性能好(内存计算)
+大规模数据存储(可拓展性)
+可靠安全
+
+`mongoose`安装 来操作 mongdb
+
+7-5 
+编写用户schema 生成用户 model

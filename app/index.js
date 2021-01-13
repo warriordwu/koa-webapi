@@ -2,8 +2,11 @@ const Koa = require('koa')
 const bodyparser = require('koa-bodyparser')// 用于解析post请求的body
 const parameter = require('koa-parameter')
 const error = require('koa-json-error')
+const mongoose = require('mongoose')
 const app = new Koa()
-
+const {connectionStr} = require('./config')
+mongoose.connect(connectionStr, { useNewUrlParser: true ,useUnifiedTopology: true}, () => console.log('mongodb连接成功!'))
+mongoose.connection.on('error', console.error)
 // 多中间件
 // const auth = async (ctx, next) => {
 //     if (ctx.url === '/users') {
